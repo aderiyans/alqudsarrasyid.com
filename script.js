@@ -83,10 +83,8 @@ $(document).ready(function(){
 
       function showcontacwa() {    
              Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'Something went wrong!',
-          footer: '<a href="">link whats app ikhwan</a>'
+          title: 'Tinjau Lebih Lanjut',
+          text: 'belum terda'
          })
         };
 
