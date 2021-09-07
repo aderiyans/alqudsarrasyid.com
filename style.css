@@ -92,7 +92,156 @@ section .title::after {
     transform: translateX(-50%);
 }
 
-/* navbar styling */
+/* loading */
+/* .img-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+            minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+
+img {
+    width: 100%;
+}
+
+.content {
+    display: none;
+}
+
+.loader {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #16191e;
+    position: absolute;
+}
+
+.loader>div {
+    height: 100px;
+    width: 100px;
+    border: 15px solid #45474b;
+    border-top-color: #2a88e6;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    animation: spin 1.5s infinite linear;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+} */
+
+/* nav bar content */
+.navco {
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    background: #C10505;
+}
+
+.navco:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.navco .logo {
+    float: left;
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 70px;
+}
+
+.navco ul {
+    float: right;
+    margin-right: 40px;
+    list-style: none;
+    position: relative;
+}
+
+.navco ul li {
+    float: left;
+    display: inline-block;
+    background: #C10505;
+    margin: 0 5px;
+}
+
+.navco ul li a {
+    color: white;
+    line-height: 70px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+}
+
+.navco ul li a:hover {
+    transition: all 0.3s ease;
+    color: gold;
+    transform: scale(1.1);
+    text-shadow: 0 0 5px yellow,
+        0 0 10px lightgrey;
+
+}
+
+.navco ul ul {
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid #C10505;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+}
+
+.navco ul ul ul {
+    border-top: none;
+}
+
+.navco ul li:hover>ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+}
+
+.navco ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(255, 0, 0);
+}
+
+.navco ul ul li a {
+    line-height: 50px;
+}
+
+.navco ul ul ul li {
+    position: relative;
+    top: -60px;
+    left: 150px;
+}
+
+.liatin,
+.aicon,
+.imput {
+    display: none;
+}
+
+.fa-plus {
+    font-size: 15px;
+    margin-left: 40px;
+}
+
+
+/* navbar index */
 .navbar {
     position: fixed;
     width: 100%;
@@ -355,7 +504,6 @@ marquee:hover {
 }
 
 .lembar p {
-    font-family: ;
     text-align: center;
 }
 
@@ -426,6 +574,7 @@ marquee:hover {
     transition: all 0.3s ease;
 }
 
+
 .services .serv-content .card:hover {
     background: #C10505;
 }
@@ -440,7 +589,7 @@ marquee:hover {
 
 .services .serv-content .card i {
     font-size: 50px;
-    color: crimson;
+    color: #C10505;
     transition: color 0.3s ease;
 }
 
@@ -453,6 +602,17 @@ marquee:hover {
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
+
+.services .serv-content .card .tbl {
+    border: none;
+    margin: 5px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
 
 /* skills section styling */
 
@@ -633,14 +793,13 @@ marquee:hover {
 }
 
 /* Sosmed */
-}
 
 .middle {
-    position: absolute;
+    /* position: absolute; */
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .botn {
@@ -685,12 +844,12 @@ marquee:hover {
 }
 
 .botn:hover::before {
-    animation: aaa 0.7s 1;
+    animation: mas 0.7s 1;
     top: -10%;
     left: -10%;
 }
 
-@keyframes aaa {
+@keyframes mas {
     0% {
         left: -110%;
         top: 90%;
@@ -817,10 +976,13 @@ marquee:hover {
     background: #C10505;
     border: 2px solid #C10505;
     box-shadow: 0 5px 15px -5px #00000070;
-    transition: all 0.3s ease;
+    /* transition: all 0.3s ease; */
+    animation: aaa 0.7s 1;
+    top: -10%;
+    left: -10%;
 }
 
-.button-area button: before {
+.button-area button :before {
     content: "";
     position: absolute;
     width: 120%;
@@ -835,9 +997,26 @@ marquee:hover {
     color: #C10505;
     background: none;
     animation: aaa 0.7s 1;
-    top: -10%;
-    left: -10%;
+    /* top: -10%;
+    left: -10%; */
 
+}
+
+@keyframes aaa {
+    0% {
+        left: -110%;
+        top: 90%;
+    }
+
+    50% {
+        left: 10%;
+        top: -30%;
+    }
+
+    100% {
+        top: -10%;
+        left: -10%;
+    }
 }
 
 /* footer section styling */
@@ -890,6 +1069,100 @@ footer span a:hover {
         object-fit: cover;
         border-radius: 6px;
         ;
+    }
+}
+
+@media (max-width: 968px) {
+    .navco ul {
+        margin-right: 0px;
+        float: left;
+    }
+
+    .navco .logo {
+        visibility: visible;
+        color: #fff;
+        font-size: 25px;
+        font-weight: 250px;
+        transition: all 0.3s ease;
+    }
+
+    .liatin+#s,
+    .op {
+        display: none;
+        transition: all 0.3s ease;
+    }
+
+    .navco ul li,
+    .navco ul ul li {
+        display: block;
+        width: 100%;
+    }
+
+    .navco ul li a:hover {
+        box-shadow: none;
+        transition: all 0.3s ease;
+    }
+
+    .liatin {
+        display: block;
+        color: white;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+
+    .liatin:hover {
+        color: #ffee00;
+        transition: all 0.3s ease;
+    }
+
+    .aicon {
+        display: block;
+        color: white;
+        position: absolute;
+        top: 0;
+        right: 40px;
+        line-height: 70px;
+        cursor: pointer;
+        font-size: 25px;
+        transition: all 0.3s ease;
+    }
+
+    .navco ul ul {
+        top: 70px;
+        border-top: 0px;
+        float: none;
+        position: static;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.3s ease;
+    }
+
+    .navco ul ul a {
+        padding-left: 40px;
+    }
+
+    .navco ul ul ul a {
+        padding-left: 80px;
+    }
+
+    .navco ul ul ul li {
+        position: static;
+    }
+
+    [id^=btn]:checked+ul {
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    .navco ul ul li {
+        border-bottom: 0px;
+    }
+
+    span.cancel:before {
+        content: '\f00d';
     }
 }
 
@@ -1109,7 +1382,7 @@ footer span a:hover {
         padding: 15px 23px;
         color: #fff;
         text-align: center;
-        font-size: 15px;
+        font-size: 12px;
     }
 
 }

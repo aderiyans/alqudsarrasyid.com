@@ -72,6 +72,11 @@ $(document).ready(function(){
     });
 });
   
+  //   nav content
+    $('.aicon').click(function(){
+    $('span').toggleClass("cancel");
+  });
+
   // alert sweet
       function showalert() {
          Swal.fire(
@@ -80,12 +85,20 @@ $(document).ready(function(){
           'info'
           )
         }
-
-      function showcontacwa() {    
-             Swal.fire({
-          title: 'Tinjau Lebih Lanjut',
-          text: 'belum terda'
-         })
-        };
-
         
+        // loading
+        $(window).on('load',function(){
+            $(".loader").fadeOut(1000);
+            $(".content").fadeIn(1000);
+        });
+
+        // alert notif
+        $('#showcontacwa').click(function(){
+            $('.tbl').addClass("show");
+            $('.tbl').removeClass("hide");
+            $('tbl').addClass("show#hidecontacwa");
+        });
+        $('.close-btn').click(function(){
+            $('.tbl').removeClass("show");
+            $('.tbl').addClass("hide");
+        });
