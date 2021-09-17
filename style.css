@@ -597,6 +597,17 @@ marquee:hover {
     color: #fff;
 }
 
+.services .serv-content .card .wa:active .text {
+    visibility: hidden;
+    transition: color 0.3s ease;
+}
+
+.services .serv-content .card .wa:active .p {
+    visibility: hidden;
+    font-size: 12px;
+    transition: color 0.3s ease;
+}
+
 .services .serv-content .card .text {
     font-size: 25px;
     font-weight: 500;
@@ -604,11 +615,28 @@ marquee:hover {
 }
 
 .services .serv-content .card .tbl {
+    visibility: hidden;
+}
+
+.services .serv-content .card .tbl1 {
+    visibility: hidden;
+}
+
+.services .serv-content .card .wa:active .tbl1 {
+    visibility: visible;
     border: none;
-    margin: 5px;
-    text-align: center;
     border-radius: 6px;
-    padding: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.services .serv-content .card .wa:active .tbl {
+    visibility: visible;
+    border: none;
+    margin-left: 10px;
+    border-radius: 6px;
+    padding: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -976,7 +1004,7 @@ marquee:hover {
     background: #C10505;
     border: 2px solid #C10505;
     box-shadow: 0 5px 15px -5px #00000070;
-    /* transition: all 0.3s ease; */
+    transition: all 0.3s ease;
     animation: aaa 0.7s 1;
     top: -10%;
     left: -10%;
@@ -1308,6 +1336,18 @@ footer span a:hover {
 }
 
 @media (max-width: 500px) {
+
+    .home {
+        display: flex;
+        background: url("img/Masjid.jpg") no-repeat center;
+        height: 100vh;
+        color: #fff;
+        min-height: 100px;
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
 
     .navbar.sticky .logo a {
         visibility: visible;
